@@ -1,4 +1,5 @@
 using DG.Tweening;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,6 +10,9 @@ public class CraftingItem : MonoBehaviour
 
     [SerializeField] private Sprite _deselectedSprite;
     [SerializeField] private Sprite _selectedSprite;
+
+    [SerializeField] private TextMeshProUGUI _itemName;
+    [SerializeField] private Image _itemIcon;
 
     private int _moveDistance;
     private float _movePercentValue = 0.054f;
@@ -30,7 +34,11 @@ public class CraftingItem : MonoBehaviour
     private void ToggleValueChanged(bool value)
     {
         if (value)
+        {
             CreateMovingTween(new Vector2(_moveDistance, 0), value);
+            MajorProjectAnimation.Instance.ShowPCSource(_itemName.text, _itemIcon.sprite);
+        }
+            
         else
             CreateMovingTween(Vector2.zero, value);
     }

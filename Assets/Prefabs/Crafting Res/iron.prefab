@@ -533,6 +533,8 @@ MonoBehaviour:
   _bg: {fileID: 898250775314341124}
   _deselectedSprite: {fileID: 21300000, guid: 4a3aac58c056def4fae6d9f2157d2559, type: 3}
   _selectedSprite: {fileID: 21300000, guid: 9b755c0d263466943a6cb53f67f8510c, type: 3}
+  _itemName: {fileID: 2667469776879198521}
+  _itemIcon: {fileID: 7295760788071713515}
 --- !u!1 &7824337776134595990
 GameObject:
   m_ObjectHideFlags: 0
